@@ -3,6 +3,8 @@ local opt = vim.opt
 
 -- Vim Commands.
 cmd.colorscheme("slate")    -- Set color scheme.
+vim.go.netwr_usetab = 1     -- Enable shrinking netrw window with <Ctl-tab>. Doesn't seem to work though...
+vim.go.netrw_wiw = 10       -- The size of the netrw window when it is shrunk.
 
 -- Vim Options.
 opt.number = true           -- Enable line numbers.
@@ -20,8 +22,5 @@ opt.cursorline = true       -- Enables cursor line
 opt.splitright = true       -- Split to the right on vertical
 opt.splitbelow = true       -- Split below when horizontal
 opt.formatoptions:append('cro') -- continue comments when going down a line, hit C-u to remove the added comment prefix
-opt.sessionoptions:remove('options') -- don't save keymaps and local options
+opt.sessionoptions:remove('options')    -- don't save keymaps and local options
 opt.foldlevelstart = 99     -- no auto folding
-
-print("core.lua done")
-

@@ -4,7 +4,8 @@ if vim.fn.has("nvim-0.11") == 0 then
 end
 
 require("core.options")
-require("core.keybindings")
+require("core.keymaps")
+require("core.netrw")
 require("core.treesitter")
 require("core.lsp")
 require("core.statusline")

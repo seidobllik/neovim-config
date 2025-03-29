@@ -46,13 +46,13 @@ vim.o.expandtab = true   -- replace tabs with spaces.
 vim.o.undofile = true    -- enable persistent undo
 vim.o.undolevels = 10000 -- 10x more undo levels
 
--- remove netrw banner for cleaner looking
-vim.g.netrw_banner = 0
-vim.g.netrw_liststyle = 3
-vim.g.netrw_showhide = 1
-vim.g.netrw_winsize = 20
-
 vim.opt.path = "**"        -- Include subfolders in searches.
+
+vim.o.wrap = false          -- Do not wrap lines of text.
+vim.o.showmode = false      -- Disable showmode - the status line already shows it.
+
+vim.opt.clipboard = "unnamedplus"
+
 
 -- Basic auto-completion. (from help autocomplete)
   local triggers = {'.'}

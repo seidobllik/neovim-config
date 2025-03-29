@@ -56,6 +56,9 @@ vim.api.nvim_set_keymap('n', '<leader>rw', ':%s/\\<<C-r><C-w>\\>//g<left><left>'
 -- Seeing the registers
 vim.api.nvim_set_keymap('n', '<leader>r', '<cmd>registers<CR>', { noremap = true, silent = true })
 
+-- Disable search highlighting with escape key.
+vim.api.nvim_set_keymap('n', '<Esc>', ':nohl<CR>', { noremap = true, silent = true })
+
 
 
 

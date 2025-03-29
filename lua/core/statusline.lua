@@ -51,6 +51,8 @@ local function lsp_status()
     return "[" .. table.concat(names, ", ") .. "]"
 end
 
+-- Build statusline string.
+---@return string
 function _G.statusline()
     return table.concat({
         "%2*",
@@ -69,5 +71,11 @@ function _G.statusline()
         "%3*t:$%n ",
     }, "")
 end
+
+-- Set up highlight groups used by statusline.
+vim.api.nvim_set_hl(0, "User1", {fg = "white", bg = "black"})
+vim.api.nvim_set_hl(0, "User2", {fg = "black", bg = "lightgreen"})
+vim.api.nvim_set_hl(0, "User3", {fg = "lightcyan", bg = "black"})
+vim.api.nvim_set_hl(0, "User4", {fg = "green", bg = "black"})
 
 vim.o.statusline = "%{%v:lua._G.statusline()%}"

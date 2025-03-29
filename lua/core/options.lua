@@ -41,6 +41,7 @@ vim.o.smartindent = true -- auto-indenting when starting a new line
 vim.o.shiftround = true  -- round indent to multiple of 'shiftwidth'
 vim.o.shiftwidth = 0     -- 0 to follow the 'tabstop' value
 vim.o.tabstop = 4        -- tab width
+vim.o.expandtab = true   -- replace tabs with spaces.
 
 vim.o.undofile = true    -- enable persistent undo
 vim.o.undolevels = 10000 -- 10x more undo levels

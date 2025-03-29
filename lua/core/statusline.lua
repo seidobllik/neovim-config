@@ -4,11 +4,34 @@ This is default statusline value:
 ```lua
 vim.o.statusline = "%f %h%w%m%r%=%-14.(%l,%c%V%) %P"
 ```
-
-below is simple example of custom statusline using neovim APIs
-
-See `:h 'statusline'` for more information about statusline.
 ]]
+
+---@return string
+local function mode()
+	local key = vim.fn.mode()
+    local modes = {
+        ["n"] = "NORMAL",
+        ["V"] = "VISUAL LINE",
+        ["v"] = "VISUAL",
+        ["i"] = "INSERT",
+        ["<C-V>"] = "V-BLOCK",
+        ["R"] = "REPLACE",
+        ["s"] = "SELECT",
+        ["t"] = "TERMINAL",
+        ["c"] = "COMMAND",
+        ["!"] = "SHELL",
+    }
+    return string.format("[%s]", modes[key])
+end
+
+---@return string
+local function spell_check()
+    if vim.o.spell then
+        return "[SPELL]"
+    else
+        return ""
+    end
+end
 
 ---Show attached LSP clients in `[name1, name2]` format.
 ---Long server names will be modified. For example, `lua-language-server` will be shorten to `lua-ls`
@@ -30,13 +53,21 @@ end
 
 function _G.statusline()
     return table.concat({
-        "%f",
-        "%h%w%m%r",
+        "%2*",
+        mode(),
+        " ",
+        spell_check(),
+        "%1* ",
+        "%3*<- %f -> ",
+        "%4*%m",
         "%=",
         lsp_status(),
-        " %-14(%l,%c%V%)",
-        "%P",
-    }, " ")
+        "%h%r",
+        "%4*%c/%l/%L ",
+        "%1*|%y ",
+        "%4*%P ",
+        "%3*t:$%n ",
+    }, "")
 end
 
 vim.o.statusline = "%{%v:lua._G.statusline()%}"

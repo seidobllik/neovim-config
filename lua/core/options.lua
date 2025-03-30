@@ -8,7 +8,7 @@ vim.o.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 
 
 -- Modifiable options.
-vim.g.colorscheme = "slate"
+vim.g.colorscheme = "unokai"
 
 vim.g.loaded_netrw = true   -- Disable netrw in favor or nvim-tree.
 vim.g.loaded_netrwPlugin = true

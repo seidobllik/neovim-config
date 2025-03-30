@@ -1,3 +1,9 @@
 [submodule "pack/packages/start/vim-be-good"]
 	path = pack/packages/start/vim-be-good
 	url = https://github.com/ThePrimeagen/vim-be-good.git
+[submodule "pack/vim-be-good/start/vim-be-good"]
+	path = pack/vim-be-good/start/vim-be-good
+	url = https://github.com/ThePrimeagen/vim-be-good.git
+[submodule "pack/nvim-tree/start/nvim-tree"]
+	path = pack/nvim-tree/start/nvim-tree
+	url = https://github.com/nvim-tree/nvim-tree.lua.git

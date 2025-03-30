@@ -13,10 +13,7 @@ vim.g.maplocalleader = vim.keycode("<cr>")
 vim.api.nvim_set_keymap('n', '<C-z>', ':setlocal spell! spelllang=en_us<CR>', { noremap = true, silent = true })
 
 -- Opening a file explorer
-vim.api.nvim_set_keymap('n', '<leader>e', ':Lex<CR>', { noremap = true, silent = true })
-
--- Opening a file from explorer
-vim.api.nvim_set_keymap('n', '<leader>o', ':Explore<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>e', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
 
 -- Opening a terminal window
 vim.api.nvim_set_keymap('n', '<C-t>', ':ter<CR>', { noremap = true, silent = true })
@@ -43,6 +40,9 @@ vim.api.nvim_set_keymap('n', '<leader>T', 'gT', { noremap = true, silent = true 
 
 -- Duplicate current buffer to a new tab
 vim.api.nvim_set_keymap('n', '<leader>n', ':tab sb<CR>', { noremap = true, silent = true })
+
+-- Moving between buffers
+vim.api.nvim_set_keymap('n', '<leader>b', ':bn<CR>', { noremap = true, silent = true })
 
 -- Quitting and saving a file using CTRL+q
 vim.api.nvim_set_keymap('n', '<C-q>', ':wq<CR>', { noremap = true, silent = true })

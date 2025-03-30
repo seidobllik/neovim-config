@@ -5,8 +5,8 @@ end
 
 require("core.options")
 require("core.keymaps")
-require("core.netrw")
 require("core.treesitter")
 require("core.lsp")
 require("core.statusline")
 require("core.snippet")
+require("core.nvim-tree")

@@ -26,7 +26,7 @@ require("nvim-tree").setup {
       number = false,
       relativenumber = false,
       signcolumn = "yes",
-      width = 30,
+      width = 40,
       float = {
         enable = false,
         quit_on_focus_loss = true,

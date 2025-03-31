@@ -1,11 +1,3 @@
---[[ :h 'statusline'
-This is default statusline value:
-
-```lua
-vim.o.statusline = "%f %h%w%m%r%=%-14.(%l,%c%V%) %P"
-```
-]]
-
 ---@return string
 local function mode()
 	local key = vim.fn.mode()
@@ -40,7 +32,7 @@ end
 local function lsp_status()
     local attached_clients = vim.lsp.get_clients({ bufnr = 0 })
     if #attached_clients == 0 then
-        return ""
+        return "[no lsp]"
     end
     local names = vim.iter(attached_clients)
         :map(function(client)
@@ -64,6 +56,7 @@ function _G.statusline()
         "%4*%m",
         "%=",
         lsp_status(),
+        " ",
         "%h%r",
         "%4*%c/%l/%L ",
         "%1*|%y ",

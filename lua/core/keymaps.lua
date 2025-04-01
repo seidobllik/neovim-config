@@ -43,6 +43,7 @@ vim.api.nvim_set_keymap('n', '<leader>n', ':tab sb<CR>', { noremap = true, silen
 
 -- Moving between buffers
 vim.api.nvim_set_keymap('n', '<leader>b', ':bn<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>B', ':bp<CR>', { noremap = true, silent = true })
 
 -- Quitting and saving a file using CTRL+q
 vim.api.nvim_set_keymap('n', '<C-q>', ':wq<CR>', { noremap = true, silent = true })
@@ -90,3 +91,24 @@ vim.api.nvim_set_keymap('t', '<C-t>', 'exit<CR>', { noremap = true, silent = tru
 -- CTRL+I or Esc to make the terminal scrollable and I to input mode
 vim.api.nvim_set_keymap('t', '<C-i>', '<C-\\><C-n>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('t', '<Esc>', '<C-\\><C-n>', { noremap = true, silent = true })
+
+
+
+-----------------------------------------
+----------[[ Neovide Specific ]]----------
+------------------------------------------
+if vim.g.neovide == true then
+    local scale_delta = 0.01
+    local modify_scale = function(factor)
+        if factor == 0 then
+            scale = 1
+        else
+            scale = vim.g.neovide_scale_factor
+        end
+        vim.g.neovide_scale_factor = scale + factor
+    end
+    vim.keymap.set('n', '<C-=>', function() modify_scale(scale_delta) end)
+    vim.keymap.set('n', '<C-->', function() modify_scale(-scale_delta) end)
+    vim.keymap.set('n', '<C-0>', function() modify_scale(0) end)
+end
+

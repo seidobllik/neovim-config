@@ -13,7 +13,7 @@ vim.o.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 ----------------------------
 --[[ Modifiable options ]]--
 ----------------------------
-vim.cmd.colorscheme("unokai")
+vim.cmd.colorscheme("kanagawa-wave")
 
 vim.g.loaded_netrw = true   -- Disable netrw in favor or nvim-tree.
 vim.g.loaded_netrwPlugin = true

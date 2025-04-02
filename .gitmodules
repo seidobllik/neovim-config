@@ -4,3 +4,6 @@
 [submodule "pack/nvim-tree/start/nvim-tree"]
 	path = pack/nvim-tree/start/nvim-tree
 	url = https://github.com/nvim-tree/nvim-tree.lua.git
+[submodule "pack/kanagawa/start/kanagawa"]
+	path = pack/kanagawa/start/kanagawa
+	url = https://github.com/rebelot/kanagawa.nvim.git

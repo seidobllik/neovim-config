@@ -1,4 +1,6 @@
--- general options (critical, necessary)
+----------------------------------------------
+--[[ general options (critical, necessary)]]--
+----------------------------------------------
 vim.o.completeopt = "menu,menuone,popup,fuzzy" -- modern completion menu
 
 vim.o.foldenable = true   -- enable fold
@@ -7,8 +9,11 @@ vim.o.foldmethod = "expr" -- use tree-sitter for folding method
 vim.o.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 
 
--- Modifiable options.
-vim.g.colorscheme = "unokai"
+
+----------------------------
+--[[ Modifiable options ]]--
+----------------------------
+vim.cmd.colorscheme("unokai")
 
 vim.g.loaded_netrw = true   -- Disable netrw in favor or nvim-tree.
 vim.g.loaded_netrwPlugin = true
@@ -58,7 +63,10 @@ vim.o.showmode = false      -- Disable showmode - the status line already shows 
 vim.opt.clipboard = "unnamedplus"
 
 
--- Basic auto-completion. (from help autocomplete)
+
+---------------------------------------------------------
+--[[ Basic auto-completion. (from help: autocomplete) ]]--
+---------------------------------------------------------
   local triggers = {'.'}
   vim.api.nvim_create_autocmd('InsertCharPre', {
     buffer = vim.api.nvim_get_current_buf(),

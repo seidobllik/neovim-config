@@ -99,7 +99,7 @@ vim.api.nvim_set_keymap('t', '<Esc>', '<C-\\><C-n>', { noremap = true, silent = 
 ------------------------------------------
 if vim.g.neovide == true then
     local scale_delta = 0.01
-    local modify_scale = function(factor)
+    local function modify_scale(factor)
         if factor == 0 then
             scale = 1
         else

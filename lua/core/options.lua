@@ -52,6 +52,8 @@ vim.o.shiftwidth = 0     -- 0 to follow the 'tabstop' value
 vim.o.tabstop = 4        -- tab width
 vim.o.expandtab = true   -- replace tabs with spaces.
 
+vim.opt.formatoptions:remove({"c", "r", "o"})  -- Disable auto comments.
+
 vim.o.undofile = true    -- enable persistent undo
 vim.o.undolevels = 10000 -- 10x more undo levels
 
@@ -62,7 +64,11 @@ vim.o.showmode = false      -- Disable showmode - the status line already shows 
 
 vim.opt.clipboard = "unnamedplus"   -- Share system clipboard with yank/put.
 
--- Set pwd at startup to be consistent.
+
+
+---------------------------------------------
+--[[ Set pwd at startup to be consistent ]]--
+---------------------------------------------
 local sysname = vim.uv.os_uname().sysname:lower()
 local directories = {
     ["windows"] = "/",

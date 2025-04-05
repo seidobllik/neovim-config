@@ -60,25 +60,37 @@ vim.opt.path = "**"        -- Include subfolders in searches.
 vim.o.wrap = false          -- Do not wrap lines of text.
 vim.o.showmode = false      -- Disable showmode - the status line already shows it.
 
-vim.opt.clipboard = "unnamedplus"
+vim.opt.clipboard = "unnamedplus"   -- Share system clipboard with yank/put.
+
+-- Set pwd at startup to be consistent.
+local sysname = vim.uv.os_uname().sysname:lower()
+local directories = {
+    ["windows"] = "/",
+    ["linux"] = "~"
+}
+for sys, dir in pairs(directories) do
+    if string.match(sysname, sys) then
+        vim.api.nvim_set_current_dir(dir)
+    end
+end
 
 
 
 ---------------------------------------------------------
 --[[ Basic auto-completion. (from help: autocomplete) ]]--
 ---------------------------------------------------------
-  local triggers = {'.'}
-  vim.api.nvim_create_autocmd('InsertCharPre', {
+local triggers = {'.'}
+vim.api.nvim_create_autocmd('InsertCharPre', {
     buffer = vim.api.nvim_get_current_buf(),
     callback = function()
-      if vim.fn.pumvisible() == 1 or vim.fn.state('m') == 'm' then
-        return
-      end
-      local char = vim.v.char
-      if vim.list_contains(triggers, char) then
-        local key = vim.keycode('<C-x><C-n>')
-        vim.api.nvim_feedkeys(key, 'm', false)
-      end
+        if vim.fn.pumvisible() == 1 or vim.fn.state('m') == 'm' then
+            return
+        end
+        local char = vim.v.char
+        if vim.list_contains(triggers, char) then
+            local key = vim.keycode('<C-x><C-n>')
+            vim.api.nvim_feedkeys(key, 'm', false)
+        end
     end
-  })
+})
 

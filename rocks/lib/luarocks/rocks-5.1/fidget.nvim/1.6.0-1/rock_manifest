@@ -1,0 +1,44 @@
+rock_manifest = {
+   doc = {
+      ["fidget-api.txt"] = "80a9fe0f60824340736d0810c7a30303",
+      ["fidget-option.txt"] = "da1a798d3f04939c40a5dcd623375315",
+      ["fidget.txt"] = "f6ddcd5db4ab23e2e5106bebc3e115c2"
+   },
+   ["fidget.nvim-1.6.0-1.rockspec"] = "842895ade8d9026e8240fdc3b006fe0f",
+   lua = {
+      fidget = {
+         ["commands.lua"] = "f040e30c5fc52b01857f8cd8b4a25b79",
+         integration = {
+            ["nvim-notify.lua"] = "888cca402e6edb756b4f70574a2b9359",
+            ["nvim-tree.lua"] = "380a0e014076cb35c1abc1138b5e06bd",
+            ["xcodebuild-nvim.lua"] = "44604109bc8e03cba29d9d06cd5b3f10"
+         },
+         ["integration.lua"] = "b766a41822e80723d4e71802c3528131",
+         ["logger.lua"] = "31618191fa88ed9cadfa970e86824184",
+         notification = {
+            ["model.lua"] = "e6c776e176c38f5d50173eb83b6cd406",
+            ["view.lua"] = "d8e1f71e925439057e16b747ee3c9534",
+            ["window.lua"] = "0f46240e6cce87f8482db8fb6ad794d8"
+         },
+         ["notification.lua"] = "4610090c21477c5506ec5d4a00e5a45c",
+         ["options.lua"] = "1de6edebbb7f2394963d14c63337457a",
+         ["poll.lua"] = "21495dd77c0b5f22c262eb9b36fa095b",
+         progress = {
+            ["display.lua"] = "260ae7fae20e9b71ea9d0249108a6352",
+            ["handle.lua"] = "51a5ab58412ef05d90e66593efa50d34",
+            ["lsp.lua"] = "a3bbbd29941d80b9001fdd5c3bfeeac1"
+         },
+         ["progress.lua"] = "6a8cc091d17b19a153aa2b336334c41c",
+         spinner = {
+            ["patterns.lua"] = "afe01c1cae9440228efeed60767bf3e1"
+         },
+         ["spinner.lua"] = "2ce123ea49f8fe07d083eaf31bd377ca"
+      },
+      ["fidget.lua"] = "2fc9f33b1fa774c3e6b45b6edc5bb218",
+      telescope = {
+         _extensions = {
+            ["fidget.lua"] = "ff9729cfc15f10791e117649e60cc241"
+         }
+      }
+   }
+}

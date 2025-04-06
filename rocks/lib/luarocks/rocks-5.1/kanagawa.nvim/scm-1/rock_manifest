@@ -1,0 +1,34 @@
+rock_manifest = {
+   colors = {
+      ["kanagawa-dragon.vim"] = "73276216e744dfc5863f935392f13731",
+      ["kanagawa-lotus.vim"] = "7a844048dbeccc4c4a7efb0e220650dd",
+      ["kanagawa-wave.vim"] = "30db2f3e823c97fa2da8997317b25c02",
+      ["kanagawa.vim"] = "80fadd11427a1e31da373cbbc0d0f026"
+   },
+   ["kanagawa.nvim-scm-1.rockspec"] = "5293f0e5ee79cb312701d2c12f719941",
+   lua = {
+      kanagawa = {
+         ["colors.lua"] = "9f17e9636fe8208aefad88865554dfe3",
+         highlights = {
+            ["editor.lua"] = "799d36d6bcc3c856b83756e49f4f2d30",
+            ["init.lua"] = "3427cd2e0c3ea86e31fe74a0ac8f123b",
+            ["lsp.lua"] = "2d34d8402725bbbbf7baa5d723ce495c",
+            ["plugins.lua"] = "7774bc3a6f45be5916b47bc1849c1c90",
+            ["syntax.lua"] = "a9aba98bc6cb5fc5f7cfca0e9996ce7b",
+            ["treesitter.lua"] = "9d3308297a2c84726d7dc9f5531e41a4"
+         },
+         ["init.lua"] = "410b1bfe1a7597d25ebbaa4334557cf5",
+         lib = {
+            ["color.lua"] = "44f612a495a7d9bb0a2630569d5c8d74",
+            ["hsluv.lua"] = "94dd2f9fcddc50c6f06d15f4ceadf109"
+         },
+         ["themes.lua"] = "c8bf28d3789dd0d5225269f5dfd558cc",
+         ["utils.lua"] = "b89d9176de2b1131064e3eeb8f944dd2"
+      },
+      lualine = {
+         themes = {
+            ["kanagawa.lua"] = "fec3fb89175f340cc67bf45856d63e86"
+         }
+      }
+   }
+}

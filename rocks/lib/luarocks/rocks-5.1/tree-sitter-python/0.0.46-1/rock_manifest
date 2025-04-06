@@ -1,0 +1,20 @@
+rock_manifest = {
+   lib = {
+      parser = {
+         ["python.so"] = "b5a2357d01b57ee712f3f5cd5147f6a0"
+      }
+   },
+   parser = {
+      ["python.so"] = "b5a2357d01b57ee712f3f5cd5147f6a0"
+   },
+   queries = {
+      python = {
+         ["folds.scm"] = "3b0c17f1444e3a341ce50f0823bda7cb",
+         ["highlights.scm"] = "073b115ac447bd29f8aa8551586d78b0",
+         ["indents.scm"] = "93ba88560daf54660dd3076303610aed",
+         ["injections.scm"] = "360ae679746369554b16c49883595d4e",
+         ["locals.scm"] = "daa61d4a60a6b2ab60de9bf5540f5899"
+      }
+   },
+   ["tree-sitter-python-0.0.46-1.rockspec"] = "a141a42fc291c39935d5961c5a06f682"
+}

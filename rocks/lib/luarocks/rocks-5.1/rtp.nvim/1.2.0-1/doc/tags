@@ -1,0 +1,3 @@
+rtp_nvim	rtp_nvim.txt	/*rtp_nvim*
+rtp_nvim.source_after_plugin_dir	rtp_nvim.txt	/*rtp_nvim.source_after_plugin_dir*
+rtp_nvim.source_rtp_dir	rtp_nvim.txt	/*rtp_nvim.source_rtp_dir*

@@ -1,0 +1,127 @@
+rock_manifest = {
+   doc = {
+      ["nvim-tree-lua.txt"] = "0c9bcf00a2cc36b8895ee83fa2ed96ab"
+   },
+   lua = {
+      ["nvim-tree"] = {
+         actions = {
+            finders = {
+               ["find-file.lua"] = "073f7c033ee635906c9660275c2de112",
+               ["init.lua"] = "810205618d578441457fff03769b14db",
+               ["search-node.lua"] = "e8147b4507c7873e0d5cb937352276fc"
+            },
+            fs = {
+               ["copy-paste.lua"] = "05ff1d289e458e322acd7afc60af331f",
+               ["create-file.lua"] = "8635780eecb0dc7c5353d37726afae2b",
+               ["init.lua"] = "5f417e48d0a6b56621673c72fff0b8a2",
+               ["remove-file.lua"] = "baa00cd13fb3c22c5cfc5d435142d28d",
+               ["rename-file.lua"] = "6550ea14fbf4b8fa7fe779eaa7d3e365",
+               ["trash.lua"] = "f67dd5e651be2e79a6fc7e3b3817e84c"
+            },
+            ["init.lua"] = "2c12cb4a25a876d1e2889be0ecd59558",
+            moves = {
+               ["init.lua"] = "31ca680073e6e05903e5b812835921dc",
+               ["item.lua"] = "22df24add58deacbfce0c6c6439dc179",
+               ["parent.lua"] = "3a4f00f38836b5323a492746b4deb5c5",
+               ["sibling.lua"] = "465dbd9986ac0e317c531fc313e7eca4"
+            },
+            node = {
+               ["file-popup.lua"] = "fec8b1681af3fc5f33697e66a864c90d",
+               ["init.lua"] = "7172826ae69174162fd4020ade97182d",
+               ["open-file.lua"] = "a1d76ca2d31c361fcdeafa0b8edf0cbc",
+               ["run-command.lua"] = "62b853504ec7b16e8f40e30618dd8803",
+               ["system-open.lua"] = "90e945d33fcbd5786e61efceeb38a749"
+            },
+            ["reloaders.lua"] = "10a9859286d0b431760f3de269d0489b",
+            root = {
+               ["change-dir.lua"] = "7587146825e456bc7f31ccb34bb2be03",
+               ["dir-up.lua"] = "b9394d78bbc75771796e51e727e9bb6d",
+               ["init.lua"] = "260e56b8b48c537d1169f37738f9bd6f"
+            },
+            tree = {
+               ["find-file.lua"] = "efa17a5091caea5c56cd867be021ec79",
+               ["init.lua"] = "c756b06c6df7d4ca0fca1eff986bbfda",
+               modifiers = {
+                  ["collapse-all.lua"] = "fd2a309837b3ee1c3447475fdee1b099",
+                  ["expand-all.lua"] = "f6af438bd9564c8e0518d19311b330fd",
+                  ["init.lua"] = "d85ee91201e0328045e19ce47a6b2d79",
+                  ["toggles.lua"] = "37a3922ceaa81fbbf16471f771137772"
+               },
+               ["open.lua"] = "c8295d6fb469259c84f0a67145d91019",
+               ["resize.lua"] = "2734cd5c3348f8a4c0c5d981b217198f",
+               ["toggle.lua"] = "b330fb4990a0b7cb287326d6b85210ac"
+            }
+         },
+         ["api.lua"] = "686380f9314228e792b9439a44d76b27",
+         appearance = {
+            ["diagnostics.lua"] = "e8d24c3446d82a0c8b683d0319597bb2",
+            ["init.lua"] = "cd20a240d68907b5b7cfcd50622deac1"
+         },
+         ["buffers.lua"] = "636bb8638ea3ebfbbeffa40a6309d919",
+         ["commands.lua"] = "65bd8dca9153a5ee349c4f4be2ab121c",
+         ["core.lua"] = "e1baa22dc7916cd6c341e73074f25b46",
+         ["diagnostics.lua"] = "4ee55a24b0e72092829a14d37dd6d1a3",
+         ["enum.lua"] = "e597778d3752e42e03987fb21c16a33b",
+         ["events.lua"] = "5d5bf1111285d69a79af07fe41b2c087",
+         explorer = {
+            ["explore.lua"] = "7d03eb1608cc2ff02c3f32f543f8309f",
+            ["filters.lua"] = "48ab619fe68113e182d770d21d572ce2",
+            ["init.lua"] = "f05bfa350a27f17aa26ce6e25f5ff9f9",
+            ["live-filter.lua"] = "b036ffd33e94eb78edec157c1ad9fc57",
+            ["node-builders.lua"] = "d9e1dbdec272bf98b0e94122ff919b3c",
+            ["node.lua"] = "a53228df35427b0279e78c21550df898",
+            ["reload.lua"] = "b3c99456c63f12a1dd5e96b1ff25d194",
+            ["sorters.lua"] = "b9fae86390fa8da71c91607a240f4b61",
+            ["watch.lua"] = "77a4e572a323883e8609b42ef3ca6ff7"
+         },
+         git = {
+            ["init.lua"] = "805345ebfbe8916f0403c09296d356b5",
+            ["runner.lua"] = "f9cc4b9a9922514c044b7cfaf2a0c3f4",
+            ["utils.lua"] = "079c6ca5af369c2e3c2dbd481a5c418a"
+         },
+         ["help.lua"] = "1dad9ca4ea8074c77eb356a1d137fffc",
+         iterators = {
+            ["node-iterator.lua"] = "2d5da660ef38b15ac92cbbe3bbaca49e"
+         },
+         ["keymap.lua"] = "58115430780e9a319f5d3cef0a39e655",
+         ["legacy.lua"] = "d16bf3b19ebdd5d3b01e16e2ab2eedb2",
+         ["lib.lua"] = "b10368a5256a50ed2798286b71fdbd04",
+         ["log.lua"] = "7b55f1a21bb950cc7b5d6c2f1b45650d",
+         marks = {
+            ["bulk-delete.lua"] = "ee76e656340b2e84ec6d75313988a61d",
+            ["bulk-move.lua"] = "6c54644b5828677bee6f7051c2c5765d",
+            ["bulk-trash.lua"] = "de5dea28e0dec1c5ff73fe4a7bc3d5df",
+            ["init.lua"] = "40d56c4d0e8eb3deaed8ffddb51b127f",
+            ["navigation.lua"] = "81df63daeb6f96e3871388e484e159cb"
+         },
+         ["node.lua"] = "a78163e5c11222484b468e2cf21fe68f",
+         ["notify.lua"] = "0167726f57f635c8e1288471dc2c6566",
+         renderer = {
+            ["builder.lua"] = "431549ddac10b88b277253134adede34",
+            components = {
+               ["diagnostics.lua"] = "8219ca78671cc6341e4290eed808762f",
+               ["full-name.lua"] = "c38044f9cfab80fba4f36d8a5f752052",
+               ["icons.lua"] = "b6e09e6dcff4b252da9325c71f9e33dd",
+               ["padding.lua"] = "15477e6c8fc0a73fa31253bb0f5c1a2a"
+            },
+            decorator = {
+               ["bookmarks.lua"] = "3cab906b1dea8ca4485279231a9c7f8e",
+               ["copied.lua"] = "f0c8b950cf81a22555243d30a9d6481f",
+               ["cut.lua"] = "8eebb0a150c00921f5f3f420e2ba4e0b",
+               ["diagnostics.lua"] = "51ba0fb1353645ecfd5dfed4e3769178",
+               ["git.lua"] = "2e92966190f841c929ba10975a561895",
+               ["hidden.lua"] = "836b285199b3533f51aadddf68cdf44a",
+               ["init.lua"] = "9840b02ef74ae46044e08cef513ca7ad",
+               ["modified.lua"] = "73f59ecb9cc47445c9f219f992779d84",
+               ["opened.lua"] = "fcfdd7436f8aeb02fc0038ae2bb5dd49"
+            },
+            ["init.lua"] = "6f919d39b4a8c4978367eaf0d50a29f8"
+         },
+         ["utils.lua"] = "b5b02bc46ae3ef2487bcd7014a862333",
+         ["view.lua"] = "677e43926d54144ce47c11730c482582",
+         ["watcher.lua"] = "6cc057696d3f216071a4ed802eb4252d"
+      },
+      ["nvim-tree.lua"] = "f667deb8a24661d4d320e32003a0b595"
+   },
+   ["nvim-tree.lua-1.6.0-1.rockspec"] = "d428b4bd53894148197039dc3b2e138e"
+}

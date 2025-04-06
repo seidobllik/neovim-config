@@ -1,5 +1,5 @@
 ----------------------------------------------
---[[ general options (critical, necessary)]]--
+--[[ general options (critical, necessary) ]]--
 ----------------------------------------------
 vim.o.completeopt = "menu,menuone,popup,fuzzy" -- modern completion menu
 
@@ -15,8 +15,9 @@ vim.o.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 ----------------------------
 vim.cmd.colorscheme("kanagawa-wave")
 
-vim.g.loaded_netrw = true   -- Disable netrw in favor or nvim-tree.
-vim.g.loaded_netrwPlugin = true
+vim.g.loaded_perl_provider = 0  -- Disable perl provider.
+--vim.g.loaded_netrw = true   -- Disable netrw in favor or nvim-tree.
+--vim.g.loaded_netrwPlugin = true
 
 vim.o.termguicolors = true  -- enable rgb colors
 

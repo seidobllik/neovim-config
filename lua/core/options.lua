@@ -69,14 +69,16 @@ vim.opt.clipboard = "unnamedplus"   -- Share system clipboard with yank/put.
 ---------------------------------------------
 --[[ Set pwd at startup to be consistent ]]--
 ---------------------------------------------
-local sysname = vim.uv.os_uname().sysname:lower()
-local directories = {
-    ["windows"] = "/",
-    ["linux"] = "~"
-}
-for sys, dir in pairs(directories) do
-    if string.match(sysname, sys) then
-        vim.api.nvim_set_current_dir(dir)
+if vim.fn.argc() == 0 then
+    local sysname = vim.uv.os_uname().sysname:lower()
+    local directories = {
+        ["windows"] = "/",
+        ["linux"] = "~"
+    }
+    for sys, dir in pairs(directories) do
+        if string.match(sysname, sys) then
+            vim.api.nvim_set_current_dir(dir)
+        end
     end
 end
 

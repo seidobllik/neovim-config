@@ -19,11 +19,11 @@ vim.api.nvim_set_keymap('n', '<leader>E', ':NvimTreeOpen .<CR>', { noremap = tru
 -- Opening a terminal window
 vim.api.nvim_set_keymap('n', '<C-t>', ':ter<CR>', { noremap = true, silent = true, desc = 'Open a terminal window' })
 
--- Split the window in Vim
+-- Split the window
 vim.api.nvim_set_keymap('n', '<leader>y', ':split<space>', { noremap = true, silent = true, desc = 'Split window vertically' })
 vim.api.nvim_set_keymap('n', '<leader>x', ':vsplit<space>', { noremap = true, silent = true, desc = 'Split window horizontally' })
 
--- Navigate the split view easier by pressing CTRL+j, CTRL+k, CTRL+h, or CTRL+l
+-- Navigate the split view easier
 vim.api.nvim_set_keymap('n', '<C-j>', '<C-w>j', { noremap = true, silent = true, desc = 'Navigate to window below' })
 vim.api.nvim_set_keymap('n', '<C-k>', '<C-w>k', { noremap = true, silent = true, desc = 'Navigate to window above' })
 vim.api.nvim_set_keymap('n', '<C-h>', '<C-w>h', { noremap = true, silent = true, desc = 'Navigate to window left' })
@@ -35,25 +35,15 @@ vim.api.nvim_set_keymap('n', '<A-Down>', '<C-w>-', { noremap = true, silent = tr
 vim.api.nvim_set_keymap('n', '<A-Left>', '<C-w><', { noremap = true, silent = true, desc = 'Resize window x-' })
 vim.api.nvim_set_keymap('n', '<A-Right>', '<C-w>>', { noremap = true, silent = true, desc = 'Resize window x+' })
 
--- Moving between tabs
-vim.api.nvim_set_keymap('n', '<leader>t', 'gt', { noremap = true, silent = true, desc = 'Navigate to next tab' })
-vim.api.nvim_set_keymap('n', '<leader>T', 'gT', { noremap = true, silent = true, desc = 'Navigate to previous tab' })
-
 -- Duplicate current buffer to a new tab
-vim.api.nvim_set_keymap('n', '<leader>n', ':tab sb<CR>', { noremap = true, silent = true, desc = 'Duplicate buffer to new tab' })
+vim.api.nvim_set_keymap('n', '<leader>t', ':tab sb<CR>', { noremap = true, silent = true, desc = 'Duplicate buffer to new tab' })
 
 -- Moving between buffers
-vim.api.nvim_set_keymap('n', '<leader>b', ':bn<CR>', { noremap = true, silent = true, desc = 'Switch to next buffer' })
-vim.api.nvim_set_keymap('n', '<leader>B', ':bp<CR>', { noremap = true, silent = true, desc = 'Switch to previous buffer' })
+vim.api.nvim_set_keymap('n', 'gb', ':bn<CR>', { noremap = true, silent = true, desc = 'Switch to next buffer' })
+vim.api.nvim_set_keymap('n', 'gB', ':bp<CR>', { noremap = true, silent = true, desc = 'Switch to previous buffer' })
 
--- Quitting and saving a file using CTRL+q
-vim.api.nvim_set_keymap('n', '<C-q>', ':wq<CR>', { noremap = true, silent = true, desc = 'Save file and quit' })
-
--- Surround word with a wanted character
-vim.api.nvim_set_keymap('n', '<leader>sw', '<cmd>echo "Press a character: " | let c = nr2char(getchar()) | exec "normal viwo\\ei" . c . "\\eea" . c . "\\e" | redraw<CR>', { noremap = true, silent = true, desc = 'Surround word with a char' })
-
--- Replace all occurrences of a word
-vim.api.nvim_set_keymap('n', '<leader>rw', ':%s/\\<<C-r><C-w>\\>//g<left><left>', { noremap = true, silent = true, desc = 'Replace all occurrences of a word' })
+-- List the buffers, and prompt for selection
+vim.api.nvim_set_keymap('n', '<leader>b', ':ls<CR>:b ', {noremap = true, silent = false, desc = 'List buffers, prompt for selection' })
 
 -- Seeing the registers
 vim.api.nvim_set_keymap('n', '<leader>r', '<cmd>registers<CR>', { noremap = true, silent = true, desc = 'List the registers' })

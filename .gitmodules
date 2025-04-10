@@ -7,3 +7,6 @@
 [submodule "pack/kanagawa/start/kanagawa"]
 	path = pack/kanagawa/start/kanagawa
 	url = https://github.com/rebelot/kanagawa.nvim.git
+[submodule "pack/lualine.nvim/start/lualine.nvim"]
+	path = pack/lualine.nvim/start/lualine.nvim
+	url = https://github.com/nvim-lualine/lualine.nvim.git
